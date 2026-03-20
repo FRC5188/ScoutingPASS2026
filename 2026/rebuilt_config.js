@@ -93,40 +93,9 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Driver Skill",
-      "code": "ds",
-      "type": "radio",
-      "choices": {
-        "n": "Not Effective<br>",
-        "a": "Average<br>",
-        "v": "Very Effective<br>",
-        "x": "Not Observed"
-      },
-      "defaultValue": "x"
-    },
-    { "name": "Defense Rating",
-      "code": "dr",
-      "type": "radio",
-      "choices": {
-        "b": "Below Average<br>",
-        "a": "Average<br>",
-        "g": "Good<br>",
-        "e": "Excellent<br>",
-        "x": "Did not play defense"
-      },
-      "defaultValue": "x"
-    },
-    { "name": "Speed Rating",
-      "code": "sr",
-      "type": "radio",
-      "choices": {
-        "1": "1 (slow)<br>",
-        "2": "2<br>",
-        "3": "3<br>",
-        "4": "4<br>",
-        "5": "5 (fast)"
-      },
-      "defaultValue":"3"
+    { "name": "Played Defense",
+      "code": "pd",
+      "type": "bool"
     },
     { "name": "Crossed Bump",
       "code": "bmp",
@@ -144,11 +113,6 @@ var config_data = `
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Make good<br>alliance partner?",
-      "tooltip": "Would you want this robot on your alliance in eliminations?",
-      "code": "all",
-      "type": "bool"
-    },
     { "name": "Was Defended",
       "code": "def",
       "type": "bool"
@@ -157,7 +121,7 @@ var config_data = `
       "code": "pen",
       "type": "bool"
     },
-    { "name": "Fuel Percentage",
+    { "name": "Fuel Scored Percentage",
       "tooltip": "What percentage of the total fuel for this alliance did this robot score?",
       "code": "pct",
       "type": "number",
