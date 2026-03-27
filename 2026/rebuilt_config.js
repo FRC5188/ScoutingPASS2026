@@ -128,11 +128,11 @@ var config_data = `
       "min": 0,
       "max": 100
     },
-    { "name": "Comments",
+    { "name": "Comments (Henry)",
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 55
+      "maxSize": 200
     }
   ]
 }`;
