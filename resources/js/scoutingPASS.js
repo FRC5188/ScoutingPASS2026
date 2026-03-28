@@ -70,7 +70,7 @@ function addTimer(table, idx, name, data) {
   button1.setAttribute("id", "start_" + data.code);
   button1.setAttribute("type", "button");
   button1.setAttribute("onclick", "timer(this.parentElement)");
-  button1.setAttribute("value", "Start");
+  button1.setAttribute("value", "Start/Stop");
   cell.appendChild(button1);
 
   var inp = document.createElement("input");
@@ -1394,7 +1394,7 @@ function resetTimer(event) {
   intervalIdField = document.getElementById("intervalId" + tId);
   var intervalId = intervalIdField.value;
   timerStatus.value = 'stopped';
-  startButton.setAttribute("value", "Start");
+  startButton.setAttribute("value", "Start/Stop");
   if (intervalId != '') {
     clearInterval(intervalId);
   }
@@ -1411,7 +1411,7 @@ function timer(event) {
   var intervalId = intervalIdField.value;
   if (statusValue == 'stopped') {
     timerStatus.value = 'started';
-    startButton.setAttribute("value", "Stop");
+    startButton.setAttribute("value", "Start/Stop");
 
     var intId = setInterval(() => {
       if (document.getElementById("status" + tId).value == 'started') {
