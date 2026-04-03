@@ -76,6 +76,22 @@ var config_data = `
     { "name": "Teleop Timer",
       "code": "tt",
       "type": "timer"
+    },
+    { "name": "Fuel Scored Percentage",
+      "tooltip": "What percentage of the total fuel for this alliance did this robot score?",
+      "code": "pct",
+      "type": "number",
+      "min": 0,
+      "max": 100
+    },
+    { "type": "spacer" },
+    { "name": "Crossed Bump",
+      "code": "bmp",
+      "type": "bool"
+    },
+    { "name": "Crossed Trench",
+      "code": "tre",
+      "type": "bool"
     }
   ],
   "endgame": [
@@ -97,14 +113,6 @@ var config_data = `
       "code": "pd",
       "type": "bool"
     },
-    { "name": "Crossed Bump",
-      "code": "bmp",
-      "type": "bool"
-    },
-    { "name": "Crossed Trench",
-      "code": "tre",
-      "type": "bool"
-    },
     { "name": "Died/Immobilized",
       "code": "die",
       "type": "bool"
@@ -121,18 +129,11 @@ var config_data = `
       "code": "pen",
       "type": "bool"
     },
-    { "name": "Fuel Scored Percentage",
-      "tooltip": "What percentage of the total fuel for this alliance did this robot score?",
-      "code": "pct",
-      "type": "number",
-      "min": 0,
-      "max": 100
-    },
-    { "name": "Comments (Henry)",
+    { "name": "Comments",
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 200
+      "maxSize": 300
     }
   ]
 }`;
