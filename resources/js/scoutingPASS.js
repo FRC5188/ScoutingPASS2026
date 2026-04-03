@@ -71,7 +71,6 @@ function addTimer(table, idx, name, data) {
   button1.setAttribute("type", "button");
   button1.setAttribute("onclick", "timer(this.parentElement)");
   button1.setAttribute("value", "Start/Stop");
-  button1.setAttribute("style", "padding: 10px 20px; font-size: 16px;");
   cell.appendChild(button1);
 
   var inp = document.createElement("input");
@@ -678,14 +677,6 @@ function addCheckbox(table, idx, name, data) {
   return idx + 1;
 }
 
-function addSpacer(table, idx, data) {
-  var row = table.insertRow(idx);
-  var cell = row.insertCell(0);
-  cell.setAttribute("colspan", 2);
-  cell.setAttribute("style", "height: 30px;");
-  return idx + 1;
-}
-
 function addElement(table, idx, data) {
   var type = null;
   var name = 'Default Name';
@@ -732,8 +723,6 @@ function addElement(table, idx, data) {
   } else if ((data.type == 'timer') ||
     (data.type == 'cycle')) {
     idx = addTimer(table, idx, name, data);
-  } else if (data.type == 'spacer') {
-    idx = addSpacer(table, idx, data);
   } else {
     console.log(`Unrecognized type: ${data.type}`);
   }
@@ -1405,7 +1394,7 @@ function resetTimer(event) {
   intervalIdField = document.getElementById("intervalId" + tId);
   var intervalId = intervalIdField.value;
   timerStatus.value = 'stopped';
-  startButton.setAttribute("value", "Start");
+  startButton.setAttribute("value", "Start/Stop");
   if (intervalId != '') {
     clearInterval(intervalId);
   }
@@ -1422,7 +1411,7 @@ function timer(event) {
   var intervalId = intervalIdField.value;
   if (statusValue == 'stopped') {
     timerStatus.value = 'started';
-    startButton.setAttribute("value", "Stop");
+    startButton.setAttribute("value", "Start/Stop");
 
     var intId = setInterval(() => {
       if (document.getElementById("status" + tId).value == 'started') {
