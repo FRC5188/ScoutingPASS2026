@@ -243,5 +243,14 @@ input {
 
 #data {
     font-family:'Lucida Console', 'monospace';
-    text-align: justify;
+ 
+
+/* Timer button sizing - doubled from original */
+input[id^="start_"],
+input[id^="clear_"] {
+    font-size: 32px;
+    padding: 20px;
+    min-height: 64px;
+    min-width: 120px;
+}   text-align: justify;
 }
