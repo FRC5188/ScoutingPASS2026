@@ -84,7 +84,10 @@ var config_data = `
       "min": 0,
       "max": 100
     },
-    { "type": "spacer" },
+    { "name": "Beached on Fuel or Bump",
+      "code": "beach",
+      "type": "bool"
+    },
     { "name": "Crossed Bump",
       "code": "bmp",
       "type": "bool"
@@ -113,7 +116,7 @@ var config_data = `
       "code": "pd",
       "type": "bool"
     },
-    { "name": "Died/Immobilized",
+    { "name": "Died/Disconnected",
       "code": "die",
       "type": "bool"
     },
